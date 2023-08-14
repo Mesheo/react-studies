@@ -4,7 +4,7 @@ this one is straight up from the React docs and will be my first contact with th
 
 ## Notes
 - Setup
-Clicking on the package.json of the tutorial I saw the following dependencies
+-- Clicking on the package.json of the tutorial I saw the following dependencies
 ```json
 "dependencies": {
     "react": "^18.0.0",
