@@ -42,3 +42,40 @@ Could not find a required file.
 ```
 So we learned that React has some opinions on how the folder structure of the project should be. After rearrenging the stuff it claims to be on /src into /src everything worked fine and this was the result after this first compilation
 ![image](https://github.com/Mesheo/react-studies/assets/71408872/2f604fe0-9969-4689-abc9-2647deb9c33a)
+
+
+## Ok now can we make this playable?
+To a tic tac toe game be considered a game we must be able to intereact with these buttons so lets see how to do that
+
+#### Props
+We can set arguments inside brackets on the components function that i think is being used as a constructor or something, the sintaxe is like this
+```js
+function Square({ value }) {
+    return <button className="square">{value}</button>;
+}
+```
+This allows to pass data from the property of the "html element" version of the component to his rendered state like this
+```js
+ <div className="board-row">
+                <Square value="1"/>
+                <Square value="2"/>
+                <Square value="3"/>
+</div>
+```
+Very nice and smooth way
+
+#### Making something when button is clicked
+We can make a function that will be executed after a click inside the component, and then, passed as an javascript item on the `onClick=` property of the html element returned, like this
+```js
+function Square({ value }) {
+    function handleClick() {
+        console.log('clicked!');
+      }
+    return <button className="square" onClick={handleClick}>{value}</button>;
+}
+```
+#### States
+To our componnet remember that was clicked we need to alter his "state"
+So we import the useState from react that will be a function that returns 2 items we destruct as `[item, setItem]`, how excatly the setItem function works is still a bit of mistery to me that will be revelead when i try to make a tictactoe with only HTML, CSS and VanillaJS
+
+
