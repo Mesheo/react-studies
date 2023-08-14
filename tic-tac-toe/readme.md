@@ -3,8 +3,8 @@ this one is straight up from the React docs and will be my first contact with th
 - link https://react.dev/learn/tutorial-tic-tac-toe
 
 ## Notes
-- Setup
--- Clicking on the package.json of the tutorial I saw the following dependencies
+#### Setup
+Clicking on the package.json of the tutorial I saw the following dependencies
 ```json
 "dependencies": {
     "react": "^18.0.0",
@@ -14,16 +14,16 @@ this one is straight up from the React docs and will be my first contact with th
 ``` 
 So i believe this the default dependencies that compose React Framework and will install each of then with <npm i dependency>
 
-- Index.js file
+#### Index.js file
 The tutorial suggest some imports but doesnt explain then so I did a bit of research because we hate to just copy and paste like some alieneted 20 century industrial worker
 
-* StrictMode 
+#### StrictMode 
 From my superficial reading this lib is like a wrapper component (and this is true just by seeing how the code is) that check for potential problems during development, seems like the "strict" property of a typescript config file but for react code
 
-* createRoot
+#### createRoot
   This one seems like a constructor of a class from the framework that create this "root" object (and can accept a existing HTML element to do on it) that has the render method who display the components passed on the args as content inside the browser DOM
 
-- The build process
+#### The build process
 I tryed to just click on my html file to open browser and for my surprise it showed up nothing. I learned that without a dev server like create-react-app or a bundler that convert the code into something else like webpack the React code wont be executed.
 And seems like this is the standardd for modern frontend frameworks so mybad.
 
