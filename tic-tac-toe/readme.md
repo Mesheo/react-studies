@@ -78,4 +78,7 @@ function Square({ value }) {
 To our componnet remember that was clicked we need to alter his "state"
 So we import the useState from react that will be a function that returns 2 items we destruct as `[item, setItem]`, how excatly the setItem function works is still a bit of mistery to me that will be revelead when i try to make a tictactoe with only HTML, CSS and VanillaJS
 
+#### How to declare a winner?
+We can already mutate the value of the square in turns, and using a early return to check if the square is empty we alread block rewriting the value of the square. But how the board (that have the array of squares and its values) will know when someone is a winner?
+
 
