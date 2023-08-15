@@ -81,4 +81,29 @@ So we import the useState from react that will be a function that returns 2 item
 #### How to declare a winner?
 We can already mutate the value of the square in turns, and using a early return to check if the square is empty we alread block rewriting the value of the square. But how the board (that have the array of squares and its values) will know when someone is a winner?
 
+You could run horizontally, vertically and diagnolly the matriz made by the squares and verify if it have the same value in sequence (i did this go horse method first)
 
+But an elegant way is to map the possible winnig combinations on the array and verify in loop on the squares if one is matched
+In the function wrote on the app we are mapping the possible
+```js
+function calculateWinner(squares) {
+    const winningLines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+    for (let winningPositions of winningLines) {
+        const [position1, position2, position3] = winningPositions;
+        if (squares[position1] && squares[position1] === squares[position2] && squares[position1] === squares[position3]) {
+            return squares[position1];
+        }
+    }
+    return null;
+}
+```
+the little css i added was just a display flex on the board and flex-direction collum so the board-row stays one below the other
